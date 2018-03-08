@@ -1,0 +1,5 @@
+url,inputselector,keyWord,buttonSelector,exception
+http://www.baidu.com,//input[@id='kw'],果芽软件,//input[@id='su'],上海果芽软件科技有限公司_百度百科
+http://www.baidu.com,//input[@id='kw'],张学友,//input[@id='su'],刘德华
+http://www.baidu.com,//input[@id='kw'],刘德华,//input[@id='su'],张学友
+http://www.jd.com,//input[@id='key'],iphone7,//*[@id='search']/div/div[2]/button,Apple iPhone7

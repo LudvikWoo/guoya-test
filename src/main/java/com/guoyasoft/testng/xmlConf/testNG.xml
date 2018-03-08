@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suit1">
+  <parameter name="urlBaidu"  value="http://www.baidu.com"/>  
+	
+	<test name="test1" preserve-order="true">
+		<classes>
+			<class name="com.guoyasoft.testng.xmlConf.TestNgParameters">
+				<methods>
+					<include name="testSearch" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
