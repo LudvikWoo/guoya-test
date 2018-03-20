@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suit1">
+	<parameter name="pro_guoya_client" value="http://127.0.0.1:8083/guoya-client/"></parameter>
+	<test name="test1" preserve-order="true">
+		<classes>
+			<class name="com.guoyasoft.autoUI.TESTExerciseInfo">
+				<methods>
+					<include name="openUrl" />
+					<include name="exerciseInfo"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
