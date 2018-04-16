@@ -1,13 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="suit1">
 	<!-- <parameter name="guoya_client" value="http://127.0.0.1:8083/guoya-client/"></parameter> -->
-	<parameter name="guoya_client" value="http://www.guoyasoft.com:15021/guoya-client/"></parameter>
+	<parameter name="loginUrl" value="http://127.0.0.1:8083/guoya/jsp/user/login.jsp"></parameter>
+	<parameter name="name" value="wuling"></parameter>
+	<parameter name="pwd" value="0000"></parameter>
 	<test name="test1" preserve-order="true">
 		<classes>
-			<class name="com.guoyasoft.autoUI.TESTExerciseInfo">
+			<class name="com.guoyasoft.autoUI.GuoyaAuto">
 				<methods>
-					<include name="openUrl" />
-					<include name="exerciseInfo"></include>
+					<include name="login" />
 				</methods>
 			</class>
 		</classes>
