@@ -1,4 +1,4 @@
-package com.guoyasoft.autoUI;
+package com.guoyasoft.autoUI.guoyaMedium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.guoyasoft.autoUI.common.BaseUI;
 
 public class SignUp2 extends BaseUI{
 	

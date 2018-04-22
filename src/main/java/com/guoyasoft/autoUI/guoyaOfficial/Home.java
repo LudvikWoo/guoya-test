@@ -1,15 +1,19 @@
-package com.guoyasoft.autoUI;
+package com.guoyasoft.autoUI.guoyaOfficial;
 
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class SwitchTo extends BaseUI{
+import com.guoyasoft.autoUI.common.BaseUI;
 
+public class Home extends BaseUI{
+	
 	@Test
 	public void link(){
 		driver.switchTo().frame("left");
@@ -42,6 +46,34 @@ public class SwitchTo extends BaseUI{
 		actions.keyDown(Keys.SHIFT).click(navigateInfo).keyUp(Keys.SHIFT).perform();
 		sleep(2000);
 		
+	}
+	
+	@Test
+	public void frame(){
+		driver.switchTo().frame("left");
+		sleep(1000);
+		
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		driver.switchTo().frame("left");
+		sleep(1000);
+		
+		WebElement exerciseinfo=driver.findElement(By.partialLinkText("作业检查"));
+		exerciseinfo.click();
+		sleep(1000);
+		
+		//先从左侧frame框出来，回到主界面
+		driver.switchTo().defaultContent();
+		sleep(1000);
+		
+		//再进入右侧frame框
+		driver.switchTo().frame("right");
+		sleep(1000);
+		
+		WebElement restart= driver.findElement(By.xpath("//input[@type='button' and @value='重新开始']"));
+		restart.click();
+		sleep(1000);
 	}
 	
 	@Test
@@ -93,5 +125,46 @@ public class SwitchTo extends BaseUI{
 			}
 		}
 		driver.switchTo().window(current);
+	}
+	
+	@Test
+	public void alert(){
+		
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		driver.switchTo().frame("left");
+		sleep(1000);
+		
+		WebElement exerciseinfo=driver.findElement(By.partialLinkText("作业检查"));
+		exerciseinfo.click();
+		sleep(1000);
+		
+		//先从左侧frame框出来，回到主界面
+		driver.switchTo().defaultContent();
+		sleep(1000);
+		
+		//再进入右侧frame框
+		driver.switchTo().frame("right");
+		sleep(1000);
+		
+		WebElement restart= driver.findElement(By.xpath("//input[@type='button' and @value='重新开始']"));
+		restart.click();
+		sleep(1000);
+		
+		Alert alert=driver.switchTo().alert();
+		alert.dismiss();
+		sleep(1000);
+		
+		restart.click();
+		sleep(1000);
+		alert=driver.switchTo().alert();
+		alert.accept();
+		sleep(1000);
+	}
+	
+	@Test
+	public void waitTime(){
+		
 	}
 }

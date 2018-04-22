@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suit1">
+	<parameter name="userName" value="guoyasoft"></parameter>
+	<parameter name="password" value="Aa123!"></parameter>
+	<parameter name="checkCode" value="12345"></parameter>
+	<test name="test0" preserve-order="true" enabled="false">
+		<parameter name="url" value="http://120.132.0.117:15021/guoya-client/"></parameter>
+		<classes>
+			<class name="com.guoyasoft.autoUI.common.BaseUI">
+				<methods>
+					<include name="openUrl" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="test1" preserve-order="true" enabled="false">
+		<parameter name="url" value="http://120.132.0.117:15021/guoya-client/"></parameter>
+		<classes>
+			<class name="com.guoyasoft.autoUI.guoyaMedium.SignUp2">
+				<methods>
+					<include name="openUrl" />
+					<include name="navigate" />
+					<!-- <include name="basic" /> -->
+					<include name="select" />
+					<include name="reset" />
+					<include name="submit" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="test3" preserve-order="true" enabled="true">
+		<parameter name="url" value="http://47.98.226.232:8080/guoya-medium/jsp/user/login.jsp"></parameter>
+		<classes>
+			<class name="com.guoyasoft.autoUI.guoyaMedium.Login">
+				<methods>
+					<include name="openUrl" />
+					<include name="loginBatch2"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

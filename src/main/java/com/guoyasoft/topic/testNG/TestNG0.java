@@ -1,4 +1,4 @@
-package com.guoyasoft.test;
+package com.guoyasoft.topic.testNG;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;

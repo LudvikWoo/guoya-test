@@ -1,4 +1,4 @@
-package com.guoyasoft.testng.xmlConf;
+package com.guoyasoft.tools;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

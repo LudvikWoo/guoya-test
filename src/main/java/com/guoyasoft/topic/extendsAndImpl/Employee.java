@@ -1,4 +1,4 @@
-package com.guoyasoft.test;
+package com.guoyasoft.topic.extendsAndImpl;
 
 public interface Employee {
 	public void toWork();

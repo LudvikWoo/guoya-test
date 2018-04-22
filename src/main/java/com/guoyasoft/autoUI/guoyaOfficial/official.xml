@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suit1">
+	<test name="test0" preserve-order="true" enabled="false">
+		<classes>
+			<class name="com.guoyasoft.autoUI.common.BaseUI">
+				<parameter name="url" value="http://120.132.0.117:15021/guoya-client/"></parameter>
+				<methods>
+					<include name="openUrl" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="test3" preserve-order="true" enabled="true">
+		<parameter name="url" value="http://120.132.0.117:15021/guoya-client/"></parameter>
+		<classes>
+			<class name="com.guoyasoft.autoUI.guoyaOfficial.Home">
+				<methods>
+					<include name="openUrl" />
+					<!-- 
+					<include name="link"/> 
+					<include name="action"/> 
+					<include name="frame" />
+					<include name="windows" />
+					<include name="alert"/>
+					 -->
+					<include name="waitTime" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

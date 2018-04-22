@@ -1,4 +1,4 @@
-package com.guoyasoft.test;
+package com.guoyasoft.topic.extendsAndImpl;
 
 import java.util.ArrayList;
 import java.util.HashSet;
