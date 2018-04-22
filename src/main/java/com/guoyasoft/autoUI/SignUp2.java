@@ -10,32 +10,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class SignUp2 {
-	WebDriver driver;
-	@BeforeClass
-	public void before(){
-		//打开浏览器
-		// 设置环境变量，指定chromedriver的路径
-				System.setProperty("webdriver.chrome.driver",
-						"src/main/resources/selenium/driver_v236_63_65/chromedriver.exe");
-				// 设置浏览器的参数
-				ChromeOptions options = new ChromeOptions();
-				// 最大化浏览器
-				options.addArguments("--test-type", "--start-maximized");
-				// options.setBinary("C:/XXXXXXX/chrome.exe");
-				// 打开浏览器
-				driver = new ChromeDriver(options);
-				sleep(1000);
-	}
+public class SignUp2 extends BaseUI{
 	
-	@Test(groups={"reset","submit"})
-	public void openUrl(){
-		//打开URL
-		driver.get("http://127.0.0.1:8080/guoya-medium/jsp/user/signUp2.jsp");
-		sleep(1000);
-	}
 	
-	@Test(groups={"reset","submit"})
+
+	@Test
 	public void navigate(){
 		//打开地址
 		//前进、后退、刷新
@@ -50,7 +29,7 @@ public class SignUp2 {
 		driver.navigate().back();
 	}
 	
-	@Test(groups={"reset","submit"})
+	@Test
 	public void basic(){
 		//普通元素抓取、填值和操作
 		WebElement userName=driver.findElement(By.id("userName"));
@@ -113,7 +92,7 @@ public class SignUp2 {
 
 	}
 	
-	@Test(groups={"reset","submit"})
+	@Test
 	public void select(){
 		//下拉框 抓取、填值和操作
 		WebElement education=driver.findElement(By.id("education"));
@@ -137,7 +116,7 @@ public class SignUp2 {
 		sleep(1000);
 	}
 	
-	@Test(groups={"reset"})
+	@Test
 	public void reset(){
 		WebElement resetBtn=driver.findElement(By.xpath("//input[@type='reset' and @value='重置']"));
 		resetBtn.click();
@@ -204,19 +183,4 @@ public class SignUp2 {
 		//多线程、循环次数
 	}
 	
-	@AfterClass
-	public void after(){
-		//关闭浏览器
-		sleep(1000);
-		driver.quit();
-	}
-	
-	public static void sleep(int millis) {
-		try {
-			Thread.sleep(millis);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 }
