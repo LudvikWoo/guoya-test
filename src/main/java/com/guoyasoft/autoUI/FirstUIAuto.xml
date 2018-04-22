@@ -13,7 +13,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="test1" preserve-order="true" enabled="true">
+	<test name="test1" preserve-order="true" enabled="false">
 		<parameter name="url" value="http://120.132.0.117:15021/guoya-client/"></parameter>
 		<classes>
 			<class name="com.guoyasoft.autoUI.SignUp2">
@@ -38,14 +38,15 @@
 			</class>
 		</classes>
 	</test>
-	<test name="test3" preserve-order="true" enabled="false">
+	<test name="test3" preserve-order="true" enabled="true">
 		<parameter name="url" value="http://120.132.0.117:15021/guoya-client/"></parameter>
 		<classes>
 			<class name="com.guoyasoft.autoUI.SwitchTo">
 				<methods>
 					<include name="openUrl" />
-					<!-- <include name="link"/> -->
-					<include name="action"/>
+					<!-- <include name="link"/> 
+					<include name="action"/>-->
+					<include name="windows"/>
 				</methods>
 			</class>
 		</classes>
