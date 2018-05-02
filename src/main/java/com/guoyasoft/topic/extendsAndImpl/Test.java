@@ -11,7 +11,4 @@ public class Test {
 		baby.welcomeWord="八阿哥";
 		System.out.println(baby.toString());
 	}
-	
-	
-	
 }

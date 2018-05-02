@@ -10,7 +10,7 @@ import com.guoyasoft.autoUI.common.BaseUI;
 
 public class TestAssert extends BaseUI {
 	/*
-	 * assertLocation（判断当前是在正确的页面）、
+	 * assertLocation（判断当前是在正确的页面）
 	 * 
 	 * assertTextPresent（检查在当前给用户显示的页面上是否有出现指定的文本）、
 	 * 
@@ -47,6 +47,8 @@ public class TestAssert extends BaseUI {
 	 * 		4、Assert一旦没通过，后续动作不执行
 	 * 
 	 */
+
+	//assertLocation（判断当前是在正确的页面）
 	@Test
 	@Parameters({ "url" })
 	public void assertLocationTrue(String url) {
@@ -55,6 +57,7 @@ public class TestAssert extends BaseUI {
 		Assert.assertEquals(actual, true);
 	}
 
+	//assertLocation（判断当前是在正确的页面）
 	@Test
 	@Parameters({ "url" })
 	public void assertLocationFalse(String url) {
