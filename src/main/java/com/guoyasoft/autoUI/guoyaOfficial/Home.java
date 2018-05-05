@@ -94,7 +94,7 @@ public class Home extends BaseUI{
 		WebElement summarizeInfo=driver.findElement(By.partialLinkText("总结"));
 		actions.keyDown(Keys.CONTROL).keyDown(Keys.SHIFT).click(summarizeInfo).keyUp(Keys.SHIFT).keyUp(Keys.CONTROL).perform();
 		sleep(2000);
-
+		
 		String current=driver.getWindowHandle();
 		System.out.println("当前界面的句柄："+current);
 		

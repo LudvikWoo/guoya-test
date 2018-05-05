@@ -35,9 +35,9 @@ public class SignUp2 extends BaseUI{
 	public void basic(){
 		//普通元素抓取、填值和操作
 		WebElement userName=driver.findElement(By.id("userName"));
-		userName.clear();
+		clean(userName);
 		sleep(1000);
-		userName.sendKeys("guoyasoft");
+		text(userName, "guoyasoft");
 		sleep(1000);
 		
 		
