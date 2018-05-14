@@ -1,4 +1,4 @@
-package com.guoyasoft.topic;
+package com.guoyasoft.topic.interfaces;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -9,13 +9,28 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class HttpClient {
-	public static String post(int timeOut, String urlLink, String xml,
-			String encode) throws Exception {
+	public static HttpURLConnection getHttpUrlConnection(String urlLink){
 		HttpURLConnection httpurlconnection = null;
 		try {
 			URL url = null;
 			url = new URL(urlLink);
 			httpurlconnection = (HttpURLConnection) url.openConnection();
+			return httpurlconnection;
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public static String post(int timeOut, String urlLink, String xml,
+			String encode) throws Exception {
+		HttpURLConnection httpurlconnection = getHttpUrlConnection(urlLink);
+		return post(timeOut, httpurlconnection, xml, encode);
+	}
+	
+	public static String post(int timeOut, HttpURLConnection httpurlconnection, String xml,
+			String encode) throws Exception {
+		try {
 			httpurlconnection.setRequestProperty("Content-type", "text/xml");
 			httpurlconnection.setDoOutput(true);
 			httpurlconnection.setDoInput(true);
@@ -54,7 +69,9 @@ public class HttpClient {
 				httpurlconnection.disconnect();
 		}
 	}
-
+	
+	
+	
 	public static String get(int timeOut, String urlLink, String encode)
 			throws Exception {
 		HttpURLConnection httpurlconnection = null;
@@ -97,11 +114,11 @@ public class HttpClient {
 			String url = "http://www.kuaidi100.com/query?type=shentong&postid=3350862539854";
 			String content = "";
 			System.out.println("GET请求报文："+url);
-			String response = HttpClient.get(3000, url, "UTF-8");
+			String response = HttpClient.get(30000, url, "UTF-8");
 			System.out.println("GET响应报文：" + response);
 			
 			url="http://www.kuaidi100.com/query?type=shentong&postid=3350862539854";
-			content="";
+			content="name=sdfsdf&pwd=132131";
 			response=HttpClient.post(3000, url, content, "UTF-8");
 			System.out.println("POST响应报文："+response);
 
