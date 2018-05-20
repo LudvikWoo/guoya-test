@@ -13,7 +13,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.guoyasoft.tools.CSVReader;
+import com.guoyasoft.topic.csv.CSVReader;
 
 public class GuoyaAuto {
 

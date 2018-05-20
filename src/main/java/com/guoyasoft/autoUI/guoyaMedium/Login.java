@@ -15,7 +15,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.guoyasoft.autoUI.common.BaseUI;
-import com.guoyasoft.tools.CSVReader;
+import com.guoyasoft.topic.csv.CSVReader;
 
 public class Login extends BaseUI{
 	
