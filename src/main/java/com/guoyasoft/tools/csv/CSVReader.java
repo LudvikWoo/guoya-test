@@ -57,7 +57,7 @@ public class CSVReader {
             // 遍历读取的CSV文件  
             //for是一个整数次的循环，三个参数：最小值，最大值，增量，取个变量名存放每次循环的序列值
             
-            Object[][] result=new Object[csvFileList.size()][5];
+            Object[][] result=new Object[csvFileList.size()][csvFileList.get(0).length];
             for (int row = 0; row < csvFileList.size(); row++) {  
             	result[row]=csvFileList.get(row);
             }  

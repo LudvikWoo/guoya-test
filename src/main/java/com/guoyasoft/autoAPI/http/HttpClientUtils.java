@@ -4,12 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.security.KeyManagementException;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.UnrecoverableKeyException;
-import java.security.cert.CertificateException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -175,8 +170,8 @@ public class HttpClientUtils {
             keyStore = KeyStore.getInstance("PKCS12");
             instream = new FileInputStream(new File(certLocalPath));// 加载本地的证书进行https加密传输
             keyStore.load(instream, password.toCharArray());// 设置证书密码
-        } catch (NoSuchAlgorithmException | CertificateException | IOException | KeyStoreException e1) {
-            e1.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
             try {
                 instream.close();
@@ -187,7 +182,7 @@ public class HttpClientUtils {
         SSLContext sslcontext = null;
         try {
             sslcontext = SSLContexts.custom().loadKeyMaterial(keyStore, password.toCharArray()).build();
-        } catch (KeyManagementException | UnrecoverableKeyException | NoSuchAlgorithmException | KeyStoreException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(sslcontext, new String[] { "TLSv1" }, null,

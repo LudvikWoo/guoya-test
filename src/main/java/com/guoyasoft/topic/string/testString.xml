@@ -4,16 +4,18 @@
 		<classes>
 			<class name="com.guoyasoft.topic.string.TestString">
 				<methods>
+					<include name="isBlank"></include>
 					<include name="length" />
+					<include name="addStr"></include>
+					<include name="equals"></include>
 					<include name="contains"></include>
 					<include name="indexOf"></include>
 					<include name="subString"></include>
-					<include name="equals"></include>
-					<include name="addStr"></include>
-					<include name="isBlank"></include>
 					<include name="strToDate"></include>
 					<include name="intToStr"></include>
 					<include name="strToNumber"></include>
+					<include name="strSplit"></include>
+					<include name="trim"></include>
 				</methods>
 			</class>
 		</classes>
