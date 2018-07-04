@@ -69,8 +69,10 @@ public class TestAssert extends BaseUI {
 
 	@Test
 	public void assertTitle() {
+		driver.get("https://www.baidu.com");
+		sleep(2000);
 		String currenTitle = driver.getTitle();
-		boolean actual = "注册界面".equals(currenTitle);
+		boolean actual = "百度一下，你就知道".equals(currenTitle);
 		Assert.assertEquals(actual, true);
 		System.out.println("判断注册界面是否ok？");
 	}
@@ -78,7 +80,7 @@ public class TestAssert extends BaseUI {
 	@Test
 	public void assertTextPresent() {
 		String pageSource = driver.getPageSource();
-		boolean actual = pageSource.contains("登记注册");
+		boolean actual = pageSource.contains("hao123");
 		Assert.assertEquals(actual, true);
 	}
 

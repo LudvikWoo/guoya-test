@@ -3,17 +3,17 @@
 	<test name="test0" preserve-order="true" enabled="true">
 		<classes>
 			<class name="com.guoyasoft.topic.asserts.TestAssert">
-				<parameter name="url" value="http://47.98.226.232:8080/guoya-medium/jsp/user/signUp2.jsp"></parameter>
+				<parameter name="url" value="https://www.baidu.com"></parameter>
 				<methods>
 					<include name="openUrl" />
-					<include name="assertLocationTrue"/>
+					<!-- <include name="assertLocationTrue"/>  -->
 					<!-- <include name="assertLocationFalse"></include> -->
-					<include name="assertTitle"></include>
+					<!-- <include name="assertTitle"></include> -->
 					<include name="assertTextPresent"></include>
-					<include name="assertAttribute"></include>
+					<!--<include name="assertAttribute"></include>
 					<include name="assertEditable"></include>
 					<include name="assertElementPresent"></include>
-					<include name="assertElementDisplay"></include>
+					<include name="assertElementDisplay"></include> -->
 				</methods>
 			</class>
 		</classes>

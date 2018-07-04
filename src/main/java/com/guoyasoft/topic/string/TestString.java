@@ -34,7 +34,6 @@ public class TestString {
 		}else{
 			System.out.println("s4为空");
 		}
-		
 	}
 	
 	@Test
@@ -122,6 +121,13 @@ public class TestString {
 			System.out.println(s);
 		}
 		//前端界面传的金额、年龄等为字符串，后端要进行数字计算，必须转成对应类型的数字
+		String param="ct=17&pn=0&tn=ikaslist&rn=10&fr=wwwt&word=简历%20英文";
+		String[] params=param.split("&");
+		for(String s:params){
+			String[] entry=s.split("=");
+			String key=entry[0];
+			String value=entry[1];
+		}
 	}
 	
 	@Test
