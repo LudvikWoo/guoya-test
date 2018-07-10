@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import com.guoyasoft.tools.csv.CSVReader;
@@ -20,6 +22,31 @@ public class TestCollection {
 	// 有序、大小固定、单个值：存放容器（数组）
 	@Test
 	public void array() {
+		//数据类型
+		
+		//1. 基本数据类型：8种
+		byte a=120;//8位
+		short b=12122;//16位
+		char c='a';//16位  1010110011
+		int d=234;//32位
+		long e=23423;//64位
+		
+		float f=23.23f;//32位
+		double g=2323.234;//64位
+		
+		boolean h=true;//32位
+		
+		//2. 引用数据类型：
+		String s1223="sdfsdf";
+		Person p=new Person();
+		WebDriver driver=new ChromeDriver();
+		
+		Person[] persons=new Person[23];
+		Person[] persons2={new Person(),new Person()};
+		String s2=new String("sdf");
+		
+		int[] ints=new int[4];
+		
 		// 1. 新建数组
 		String[] array = new String[4];
 		String[] array2 = { "a", "b", "c", "d" };
@@ -34,7 +61,8 @@ public class TestCollection {
 
 		// 4.1 取数据(单个)
 		String s = array[3];
-
+		
+		
 		// 4.2 取数据（批量）
 		for (int i = 0; i < array.length; i++) {
 			String item = array[i];
@@ -60,8 +88,8 @@ public class TestCollection {
 		list.add("d");
 
 		// 修改数据
-		list.add(2, "f");
-
+//		list.add(2, "f");
+		
 		// 取数据：单个
 		String s = list.get(1);
 
@@ -121,8 +149,7 @@ public class TestCollection {
 		String age = map.get("age");
 
 		// 取批量：无序容器，要先排序
-		Iterator<Map.Entry<String, String>> iterator = map.entrySet()
-				.iterator();
+		Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
 		while (iterator.hasNext()) {
 			Map.Entry<String, String> item = iterator.next();
 			String key = item.getKey();

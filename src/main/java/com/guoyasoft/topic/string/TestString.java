@@ -82,6 +82,13 @@ public class TestString {
 		isEqual=s6.equals(s7);//越确定的，越要写在前面，如果都不为空，前后顺序没有关系，所以一般变量放后面，确定的字符串放前面
 
 	}
+	@Test
+	public void uperAndLow(){
+		String s1="asdAsdf";
+		String s2=s1.toLowerCase();//asdasdf
+		String s3=s1.toUpperCase();//ASDASDF
+		System.out.println("s2="+s2+";s3="+s3);
+	}
 	
 	@Test
 	public void contains(){
@@ -153,7 +160,7 @@ public class TestString {
 	@Test
 	public void strToNumber(){
 		String s="10";
-		//包装类。因为基本类型（int、long、float、double不是类，然后方法只能放在类里面）
+		//包装类。因为基本类型（byte(Byte)、short(Short)、int(Integer)、long(Long)、float(Float)、double(Double)不是类，然后方法只能放在类里面）
 		int a=Integer.parseInt(s);
 		System.out.println("a="+a);
 		

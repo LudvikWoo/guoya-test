@@ -3,8 +3,8 @@
 	<parameter name="userName" value="guoyasoft"></parameter>
 	<parameter name="password" value="Aa123!"></parameter>
 	<parameter name="checkCode" value="12345"></parameter>
-	<test name="test0" preserve-order="true" enabled="false">
-		<parameter name="url" value="http://120.132.0.117:15021/guoya-client/"></parameter>
+	<test name="test0" preserve-order="true" enabled="true">
+		<parameter name="url" value="http://47.98.226.232:8080/guoya-medium/jsp/user/signUp.jsp"></parameter>
 		<classes>
 			<class name="com.guoyasoft.autoUI.common.BaseUI">
 				<methods>
@@ -14,7 +14,7 @@
 		</classes>
 	</test>
 	<test name="test1" preserve-order="true" enabled="false">
-		<parameter name="url" value="http://120.132.0.117:15021/guoya-client/"></parameter>
+		<parameter name="url" value="http://47.98.226.232:8080/guoya-medium/jsp/user/signUp.jsp"></parameter>
 		<classes>
 			<class name="com.guoyasoft.autoUI.guoyaMedium.SignUp2">
 				<methods>
@@ -28,7 +28,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="test3" preserve-order="true" enabled="true">
+	<test name="test3" preserve-order="true" enabled="false">
 		<parameter name="url" value="http://47.98.226.232:8080/guoya-medium/jsp/user/login.jsp"></parameter>
 		<classes>
 			<class name="com.guoyasoft.autoUI.guoyaMedium.Login">

@@ -45,6 +45,7 @@ public class TestAssert extends BaseUI {
 	 * 		2、webelement能过获取属性attribute
 	 * 		3、string字符串的各种操作和对比
 	 * 		4、Assert一旦没通过，后续动作不执行
+	 * 		5、如果Assert失败，要继续执行，或者走异常分支，用try{}catch(Error e){异常要做的事}
 	 * 
 	 */
 
@@ -64,7 +65,7 @@ public class TestAssert extends BaseUI {
 		driver.get("https://www.baidu.com");
 		String currentUrl = driver.getCurrentUrl();
 		boolean actual = url.equals(currentUrl);
-		Assert.assertEquals(actual, true);
+		Assert.assertEquals(actual, false);
 	}
 
 	@Test
@@ -127,5 +128,4 @@ public class TestAssert extends BaseUI {
 		Assert.assertEquals(actual, true);
 		reset.click();
 	}
-
 }

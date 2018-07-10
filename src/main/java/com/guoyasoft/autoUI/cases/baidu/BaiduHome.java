@@ -18,9 +18,9 @@ public class BaiduHome extends BaseUI{
 	@FindBy(xpath="//*[@id='su']")
 	public WebElement search;
 
+	
 	public void search(String content){
 		text(input, content);
 		click(search);
 	}
-	
 }

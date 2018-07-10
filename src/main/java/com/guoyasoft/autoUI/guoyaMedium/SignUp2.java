@@ -14,8 +14,6 @@ import com.guoyasoft.autoUI.common.BaseUI;
 
 public class SignUp2 extends BaseUI{
 	
-	
-
 	@Test
 	public void navigate(){
 		//打开地址
