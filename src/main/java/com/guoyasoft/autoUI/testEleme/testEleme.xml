@@ -3,9 +3,10 @@
 	<test name="test0" preserve-order="true" enabled="true">
 		<parameter name="url" value="http://localhost:8081/#/login"></parameter>
 		<classes>
-			<class name="com.guoyasoft.autoUI.common.BaseUI">
+			<class name="com.guoyasoft.autoUI.testEleme.TestEleme">
 				<methods>
 					<include name="openUrl" />
+					<include name="onclick" />
 				</methods>
 			</class>
 		</classes>

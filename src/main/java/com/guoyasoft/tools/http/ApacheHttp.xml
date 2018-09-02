@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="suit1">
 	<test name="test0" preserve-order="true" enabled="true">
-	<parameter name="url" value="http://47.98.226.232:8080/guoya-medium/user/login.action"></parameter>
+		<parameter name="url" value="http://47.98.226.232:8080/guoya-medium/user/login.action"></parameter>
 		<classes>
 			<class name="com.guoyasoft.tools.http.TestHttp">
 				<methods>

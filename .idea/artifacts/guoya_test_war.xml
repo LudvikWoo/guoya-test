@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="guoya-test:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="guoya-test-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="guoya-test:war exploded" />
+    </root>
+  </artifact>
+</component>

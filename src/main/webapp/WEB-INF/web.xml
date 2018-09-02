@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>guoya-test</display-name>
+  <servlet>
+  	<description>JAX-WS endpoint - TestSoapService</description>
+  	<display-name>TestSoapService</display-name>
+  	<servlet-name>TestSoapService</servlet-name>
+  	<servlet-class>
+  		com.sun.xml.ws.transport.http.servlet.WSServlet
+  	</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TestSoapService</servlet-name>
+  	<url-pattern>/TestSoapPort</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,4 +22,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-</web-app>
+  <listener>
+  	<listener-class>
+  		com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+  	</listener-class>
+  </listener></web-app>

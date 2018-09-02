@@ -8,7 +8,7 @@ public class ApacheHttpBean {
 	private HashMap<String,String> headers=new HashMap<String,String>();
 	private HashMap<String,String> params=new HashMap<String,String>();
 	private String encode="UTF-8";
-	
+
 	public int getTimeout() {
 		return timeout;
 	}

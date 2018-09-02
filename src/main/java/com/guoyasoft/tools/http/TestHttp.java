@@ -24,6 +24,20 @@ public class TestHttp {
 		Assert.assertEquals(true, isSuccess);
 	}
 	
+	@Test
+	public void queryUser() throws Exception{
+		ApacheHttpBean bean=new ApacheHttpBean();
+		bean.setEncode("UTF-8");
+		bean.setUrl("http://47.98.226.232:8080/guoya-medium/user/queryUser.action");
+		bean.getHeaders().put("Host", "47.98.226.232:8080");
+		
+		bean.getParams().put("realName", "xuepenglei");
+		bean.getParams().put("userName", "xuepl");
+		
+		String response=ApacheHttp.httpPost2(bean);
+		System.out.println("查询用户结果="+response);
+	}
+	
 	@Test(dataProvider="loginUser",dataProviderClass=com.guoyasoft.tools.http.ApacheHttpDataProvider.class)
 	public void testHttpCsv(ITestContext context, String userName,String password,String checkCode,String exception) throws Exception{
 		ApacheHttpBean bean=new ApacheHttpBean();

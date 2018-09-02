@@ -60,13 +60,12 @@ public class ApacheHttp {
 					.setSocketTimeout(params.getTimeout()).setConnectTimeout(params.getTimeout()).build();// 设置请求和传输超时时间
 			httpPost.setConfig(requestConfig);
 			
-			Iterator iterator=params.getHeaders().entrySet().iterator();
+			Iterator<Map.Entry<String,String>> iterator=params.getHeaders().entrySet().iterator();
 			while(iterator.hasNext()){
-				Map.Entry entry = (Map.Entry) iterator.next();
-				httpPost.addHeader(entry.getKey().toString(), entry.getValue().toString());
+				Map.Entry<String,String> entry = (Map.Entry<String,String>) iterator.next();
+				httpPost.addHeader(entry.getKey(), entry.getValue());
 			}
 
-			
 
 			List<NameValuePair> paramList = new ArrayList<NameValuePair>();
 			iterator=params.getParams().entrySet().iterator();
